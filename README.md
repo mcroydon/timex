@@ -38,6 +38,14 @@ $ Current time: 2014-02-23 05:38:34.777437699 +0000 UTC
   Estimated error: 24376
 ```
 
+# Testing
+
+```
+$ go test github.com/mcroydon/timex
+```
+
+To see the current values of `timex.Now()` run `go test` with `-v`.
+
 # License
 
 Released under a 3-clause BSD license.  The effective license may change based on the license of sys/timex.h and
