@@ -13,24 +13,30 @@ altogether idomatic. Please open an issue if you see anything that could use imp
 
 Timex can be installed using go get:
 
-```$ go get github.com/mcroydon/timex
+```
+$ go get github.com/mcroydon/timex
+```
 
 From there you can import and use timex:
 
-```import (
+```go
+import (
     "fmt"
     "github.com/mcroydon/timex"
 )
 tmx := timex.Now()
 fmt.Printf("Current time is %v and status is %v", tmx.Time, tmx.StatusInfo())
+```
 
 You can also install and use timexinfo:
 
-```$ go install github.com/mcroydon/timex/timexinfo
+```
+$ go install github.com/mcroydon/timex/timexinfo
 $ Current time: 2014-02-23 05:38:34.777437699 +0000 UTC
   Status: Everything is ok.
   Max error: 224774
   Estimated error: 24376
+```
 
 # License
 
