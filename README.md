@@ -32,10 +32,11 @@ You can also install and use timexinfo:
 
 ```
 $ go install github.com/mcroydon/timex/timexinfo
-$ Current time: 2014-02-23 05:38:34.777437699 +0000 UTC
-  Status: Everything is ok.
-  Max error: 224774
-  Estimated error: 24376
+$ timexinfo
+Current time: 2014-02-23 05:38:34.777437699 +0000 UTC
+Status: Everything is ok.
+Max error: 224774
+Estimated error: 24376
 ```
 
 # Testing
