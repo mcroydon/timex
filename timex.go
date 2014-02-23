@@ -21,18 +21,18 @@ import "C"
 import "time"
 
 const (
-	// Eveything is okay with no leap second warning.
+	// Ok means that eveything is okay with no leap second warning.
 	Ok = C.TIME_OK
-	// Positive leap second warning. An additional leap second will be added after
+	// Ins indicates a positive leap second warning. An additional leap second will be added after
 	// 23:59:59 today.
 	Ins = C.TIME_INS
-	// Negative leap second warning. Skip 23:59:59 at the end of the day.
+	// Del indicates a negative leap second warning. Skip 23:59:59 at the end of the day.
 	Del = C.TIME_DEL
-	// It is currently a leap second.
+	// Oop is when a leap second is occuring.
 	Oop = C.TIME_OOP
-	// The leap second has occured.
+	// Wait means that leap second has occured.
 	Wait = C.TIME_WAIT
-	// Clock is not synchronized.
+	// Error signifies that the clock is not synchronized.
 	Error = C.TIME_ERROR
 )
 
