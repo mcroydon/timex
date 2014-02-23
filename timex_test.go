@@ -30,7 +30,7 @@ func TestBasic(t *testing.T) {
 		tmx.Time, tmx.StatusInfo(), tmx.Maxerror, tmx.Esterror)
 }
 
-func Benchmark(b *testing.B) {
+func BenchmarkHistogram(b *testing.B) {
 	// TODO: look at timedelta and clock error during benchmark runs.
 	s := metrics.NewUniformSample(100)
 	est := metrics.NewHistogram(s)
