@@ -41,7 +41,7 @@ func BenchmarkHistogram(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		tmx := Now()
 		if prev.Year() != 1 {
-			delta.Update(int64(time.Since(prev)/time.Nanosecond))
+			delta.Update(int64(time.Since(prev) / time.Nanosecond))
 		}
 		est.Update(tmx.Esterror)
 		max.Update(tmx.Maxerror)
