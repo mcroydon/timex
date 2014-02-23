@@ -44,7 +44,8 @@ $ Current time: 2014-02-23 05:38:34.777437699 +0000 UTC
 $ go test github.com/mcroydon/timex
 ```
 
-To see the current values of `timex.Now()` run `go test` with `-v`.
+To see the current values of `timex.Now()` run `go test` with `-v`. To run a benchmark that tracks the min, max,
+and mean values returned by timex.Now() during the benchmark, run `go test -bench . github.com/mcroydon/timex`.
 
 # License
 
