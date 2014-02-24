@@ -3,6 +3,9 @@
 // in sys/timex.h. This package will only work on systems with cgo and sys/timex.h (which includes modern
 // Linux and many BSD distributions but not Mac OS X).
 //
+// This information is readily avaialble via Adjtimex in the syscall package (http://golang.org/pkg/syscall/#Adjtimex)
+// and you should probably use that instead.
+//
 // Note: This package is distributed under a BSD license but the effective license may change based on the
 // license of sys/timex.h and related files on your system.
 package timex

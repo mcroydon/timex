@@ -7,7 +7,8 @@ Linux and BSD distributions but not Mac OS X.
 # Status
 
 Timex is my first cgo package and as such there may be errors, leaks, or other bad behavior. It also may not be
-altogether idomatic. Please open an issue or get in touch if you see anything that could use improvement.
+altogether idomatic. Please open an issue or get in touch if you see anything that could use improvement.  Also,
+you should probably use [Adjtimex in the syscall package](http://golang.org/pkg/syscall/#Adjtimex) instead.
 
 # Installation and use
 
