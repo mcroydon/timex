@@ -8,7 +8,28 @@ Linux and BSD distributions but not Mac OS X.
 
 Timex is my first cgo package and as such there may be errors, leaks, or other bad behavior. It also may not be
 altogether idomatic. Please open an issue or get in touch if you see anything that could use improvement.  Also,
-you should probably use [Adjtimex in the syscall package](http://golang.org/pkg/syscall/#Adjtimex) instead.
+you should probably use [Adjtimex in the syscall package](http://golang.org/pkg/syscall/#Adjtimex) instead:
+
+```
+package main
+
+import (
+        "log"
+        "syscall"
+)
+
+func main() {
+        var timex = new(syscall.Timex)
+        status, err := syscall.Adjtimex(timex)
+        if err != nil {
+                log.Fatalf("Adjtimex error: %v", err)
+        }
+        if status != 0 {
+                log.Fatalf("Unexpected syscall status %v", status)
+        }
+        log.Printf("time: %v max: %v est: %v status: %v\n", timex.Time, timex.Maxerror, timex.Esterror, timex.Status)
+}
+```
 
 # Installation and use
 
